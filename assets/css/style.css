@@ -1,0 +1,944 @@
+/* ----------------
+  general selector 
+---------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Circular Std', sans-serif;
+
+
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--sw-light);
+}
+
+
+/* #region--------Utiliti ---------- */
+
+:root {
+    --sw-primary: #141922;
+    --sw-light_gray: #a3a3a3;
+    --sw-flash_interaction: #86c62c;
+    --sw-footer: #282828;
+    --sw-dark: #000000;
+    --sw-light: #ffffff;
+
+}
+
+
+.d_flex {
+    display: flex;
+}
+
+.container {
+    margin: auto;
+}
+
+.d_b {
+    display: block;
+}
+
+.txt_c {
+    text-align: center;
+}
+
+.my_30 {
+    margin: 30px 0;
+}
+
+.mg_negative_5 {
+    margin: 0 -5px;
+}
+
+.mg_negative_20 {
+    margin: 0 -20px;
+}
+
+.m_lr_5 {
+    margin: 0 5px;
+}
+
+.p_5 {
+    padding: 5px;
+}
+
+.btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Columns selector  */
+
+.col_12 {
+    width: 100%;
+}
+
+
+.col_2 {
+    width: calc(100% / 12 * 6);
+}
+
+
+
+/* #endregion--------Utiliti ---------- */
+
+/* #region-----------Debug------------- */
+
+
+.debug #app_main {
+    background-color: blue;
+}
+
+.debug #app_footer {
+    background-color: green;
+}
+
+
+/* #endregion-----------Debug------------- */
+
+/* ************
+     TOP
+************ */
+
+.top_page {
+    height: calc(100vh - 70px);
+}
+
+/* ---------- sidebar --------- */
+
+
+/* top side bar  */
+#app_sidebar {
+    width: 50px;
+    flex-direction: column;
+    color: var(--sw-light);
+}
+
+#app_sidebar {
+    padding: 10px 0;
+    background-color: var(--sw-dark);
+    transition-duration: 0.5s;
+}
+
+#app_sidebar span {
+    font-size: 12px;
+    vertical-align: middle;
+    margin-left: 5px;
+    display: none;
+    cursor: pointer;
+}
+
+#app_sidebar button:not(.logo, .profile, .logo_lg, .add_playlist),
+#app_sidebar span,
+.items_playlist li,
+.playlist span {
+    filter: brightness(60%);
+}
+
+
+.sidebar_top button,
+.sidebar_bottom button {
+    width: 30px;
+    margin: 5px auto;
+    vertical-align: middle;
+}
+
+
+.logo {
+    filter: invert(1);
+}
+
+.logo_lg {
+    display: none;
+}
+
+
+/* playlist sidebar */
+
+.playlist {
+    display: none;
+    text-align: left;
+}
+
+.playlist h5 {
+    margin: 20px 0 10px 0;
+}
+
+.playlist .add_playlist {
+    background-color: var(--sw-light_gray);
+    font-size: 35px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin: 5px 5px 5px 0;
+    width: 40px;
+    vertical-align: middle;
+    filter: brightness(60%);
+}
+
+
+/* playlist scrollbar zone */
+
+.items_playlist {
+    width: 100%;
+    text-align: left;
+
+}
+
+.items_playlist {
+    overflow: auto;
+    flex-grow: 1;
+    transition-duration: 0.5s;
+
+
+}
+
+.items_playlist li {
+    font-size: 12px;
+    margin: 20px 0;
+    list-style: none;
+    cursor: pointer;
+    display: none;
+}
+
+/* Scrollbar customization */
+
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: trasparent;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: trasparent;
+    border-radius: 10px;
+
+
+}
+
+/* Handle on hover */
+.items_playlist:hover::-webkit-scrollbar-thumb {
+    background: rgba(139, 139, 139, 0.299);
+
+}
+
+.container_for_scrollbar:hover::-webkit-scrollbar-thumb {
+    background: rgba(139, 139, 139, 0.299);
+}
+
+/* bottom side bar  */
+
+
+.sidebar_bottom .download_app {
+    width: 15px;
+
+}
+
+.sidebar_bottom .profile {
+    border-radius: 50%;
+    overflow: hidden;
+    aspect-ratio: 1 /1;
+    background-color: var(--sw-light_gray);
+}
+
+.sidebar_bottom div:last-child {
+    margin-top: 7px;
+}
+
+
+
+/* ****************
+        MAIN  
+******************* */
+
+#app_main {
+    width: calc(100% - 50px);
+    text-align: left;
+    background-color: var(--sw-primary);
+    color: var(--sw-light);
+
+}
+
+#app_main img,
+#app_main h6,
+#app_main .artist {
+    cursor: pointer;
+    display: inline-block;
+}
+
+#app_main .container_for_scrollbar {
+    overflow-y: auto;
+    height: calc(100% - 70px);
+    padding: 10px;
+}
+
+/* window song under 576  */
+
+.under_576 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: calc(100% - 54px);
+    position: fixed;
+    bottom: 71px;
+    right: 2px;
+    background-color: var(--sw-footer);
+    border-radius: 20px;
+    z-index: 1000;
+
+}
+
+
+
+/* Upgrade zone  */
+
+.upgrade {
+    text-align: end;
+    background-color: #00000074;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    filter: brightness(60%);
+    transition-duration: 0.3s;
+
+}
+
+.upgrade .btn {
+    border: 1px solid var(--sw-light);
+    border-radius: 50px;
+    padding: 10px 35px;
+    margin: 20px 30px;
+    color: var(--sw-light);
+    font-size: 12px;
+    display: inline-block;
+    transition: transform .3s;
+}
+
+.upgrade .btn:hover {
+    transform: scale(1.1);
+}
+
+/* Category zone  */
+
+
+.category {
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.category>div {
+    margin: 10px 10px 20px 10px;
+    filter: brightness(60%);
+    font-size: 12px;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition-duration: 0.3s;
+
+}
+
+.category a {
+    font-size: 12px;
+    color: var(--sw-light);
+    transition-duration: 0.3s;
+
+}
+
+.category>div:hover .border_up {
+    border-top: 3px solid var(--sw-flash_interaction);
+
+}
+
+.border_up {
+
+    width: 20px;
+    height: 1px;
+    border-top: 3px solid transparent;
+}
+
+/* recently played zone  */
+
+
+.container_cover {
+    flex-wrap: wrap;
+}
+
+.single_cover_img {
+    position: relative;
+}
+
+.single_cover_img {
+    color: var(--sw-light);
+}
+
+.overlay {
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 5px);
+    font-size: 50px;
+    cursor: pointer;
+    background-color: #0000008a;
+
+}
+
+.overlay i {
+    filter: brightness(60%);
+
+}
+
+.artist {
+    filter: brightness(60%);
+    font-size: 10px;
+}
+
+/* Create for  */
+
+.heading .subtitle {
+    font-size: 14px;
+    filter: brightness(60%);
+    margin-top: 5px;
+}
+
+/* Create for  */
+
+
+.more_love .overlay {
+    border-radius: 50%;
+}
+
+.more_love img {
+    border-radius: 50%;
+}
+
+
+
+/* Final space  under 576*/
+
+.final_space {
+    height: 80px;
+}
+
+/* ************
+   FOOTER
+************ */
+
+/* LEFT block footer  */
+
+#app_footer {
+    background-color: var(--sw-footer);
+    color: var(--sw-light);
+    height: 70px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.container_footer {
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.selected_album {
+    align-items: center;
+    min-width: 80px;
+    width: 30%;
+    height: 100%;
+    display: none;
+}
+
+.selected_album .cover {
+    margin: 0 10px
+}
+
+.selected_album .album {
+    font-size: 12px;
+    font-weight: bold;
+
+}
+
+.cover img {
+    max-width: 50px;
+    vertical-align: middle;
+
+}
+
+.info_cover {
+    vertical-align: middle;
+}
+
+.info_cover *:not(.album, .block_effect, .container_animation) {
+    font-size: 10px;
+    filter: brightness(60%);
+}
+
+.container_animation {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.block_effect {
+    width: 30px;
+    height: 40px;
+    position: absolute;
+    filter: blur(2px);
+    background-color: var(--sw-footer);
+    z-index: -1;
+    /* border: 1px solid black; */
+}
+
+.left_wall {
+    top: -10px;
+    left: -28px;
+}
+
+.right_wall {
+    top: -10px;
+    right: -25px;
+}
+
+
+
+.heart_folder {
+    margin-left: 5%;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.heart_folder i {
+    filter: brightness(60%);
+    cursor: pointer;
+}
+
+
+.under_576_left,
+.under_576_right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+   
+}
+
+.under_576_left i,.under_576_right i {
+    color: var(--sw-light);
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+
+/* CENTRAL block footer  */
+
+
+.music_function {
+    width: 40%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.container_button_area {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.button_area {
+    height: 100%;
+    max-width: 230px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.button_area i:not(.play i, .spotify_play i) {
+    font-size: 15px;
+    filter: invert(1) brightness(60%);
+    margin: 0 5px;
+
+}
+
+.play i {
+    font-size: 30px;
+    filter: invert(1);
+    margin: 0 7px;
+    transition-duration: 0.3s;
+
+}
+
+.spotify_play i {
+    font-size: 30px;
+    filter: invert(1);
+    margin: 0 7px;
+    transition-duration: 0.3s;
+    display: none;
+}
+
+.shuffle,
+.repeat {
+    display: none;
+}
+
+.timing_area {
+    width: 70%;
+    align-items: center;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+input[type="number"] {
+    background-color: transparent;
+    border: none;
+    width: 22px;
+    color: var(--sw-light);
+    font-size: 12px;
+    font-family: 'Circular Std', sans-serif;
+
+}
+
+.timing_area input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* RIGHT block footer  */
+
+.other_function {
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.other_function i {
+    font-size: 15px;
+    filter: invert(1) brightness(60%);
+    margin: 0 5px;
+    vertical-align: middle;
+
+}
+
+
+.volume {
+    width: 30%;
+    margin: 0 20px;
+    display: none;
+}
+
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    background: #d3d3d3;
+    border-radius: 50px;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    filter: brightness(60%);
+    vertical-align: middle;
+
+
+}
+
+.slider:hover {
+    opacity: 1;
+    filter: brightness(100%);
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--sw-light);
+    cursor: pointer;
+    outline: none;
+}
+
+.slider:hover::-webkit-slider-thumb {
+    opacity: 1;
+    -webkit-outline: 4px solid var(--sw-light);
+    outline: 4px solid var(--sw-light);
+}
+
+
+/* ************
+   ANIMATION
+************ */
+
+.btn_h:hover {
+    filter: brightness(100%) !important;
+}
+
+.btn_h1:hover {
+    filter: invert(1) brightness(100%) !important;
+}
+
+.scale_h:hover {
+    transform: scale(1.1);
+}
+
+#app_sidebar span:hover,
+#app_sidebar li:hover,
+.category>div:hover {
+    filter: brightness(100%);
+}
+
+.single_cover_img:hover .overlay {
+    visibility: visible;
+
+}
+
+.single_cover_img i:hover {
+    filter: brightness(100%);
+
+}
+
+
+
+
+@keyframes tilt {
+    0% {
+        transform: translatex(0px);
+    }
+
+    33% {
+        transform: translatex(30px);
+
+    }
+
+    66% {
+        transform: translatex(-30px);
+
+    }
+
+    100% {
+        transform: translatex(0px);
+
+    }
+
+}
+
+
+/* ************
+   RESPONSIVE
+************ */
+
+
+/* ---------xs dimension (extra dimension)-------- */
+@media screen and (min-width: 400px) {
+
+
+
+
+    .col_6_s {
+        width: 50%;
+    }
+
+    .shuffle,
+    .repeat {
+        display: block;
+    }
+
+}
+
+/* ------s dimension--------  */
+@media screen and (min-width: 576px) {
+
+    /* sidebar responsive */
+
+    #app_sidebar {
+        width: 230px;
+        align-items: start;
+        padding-left: 15px;
+        
+    }
+
+    #app_sidebar button:not(.logo_lg, .download_app, .add_playlist) {
+        width: 20px;
+    }
+
+    .sidebar_top,
+    .sidebar_bottom {
+        text-align: left;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    #app_sidebar .logo_lg {
+        width: 100px;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    #app_sidebar span {
+        display: inline-block;
+    }
+
+    .playlist {
+        display: block;
+    }
+
+    .items_playlist li {
+        display: block;
+    }
+
+    .sidebar_bottom .hr_download {
+
+        border-bottom: 1px solid var(--sw-light);
+        filter: brightness(60%);
+    }
+
+    /* main responsive */
+    .under_576 {
+        display: none;
+    }
+
+    .final_space {
+        display: none;
+    }
+
+    /* footer responsive */
+
+    /* left footer block  */
+
+    .selected_album {
+        display: flex;
+    }
+
+    .cover img {
+        max-width: 30px;
+
+    }
+
+    .info_cover .artist,
+    .info_cover .song {
+
+        animation-name: tilt;
+        animation-duration: 20s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        position: relative;
+        z-index: -4;
+
+    }
+
+    .heart_folder {
+        flex-direction: row;
+        gap: 10px;
+        margin-left: 10%;
+    }
+
+
+    /* right footer block  */
+
+    .other_function {
+        justify-content: end;
+        display: flex;
+    }
+
+    .volume {
+        display: block;
+    }
+
+    .under_576_left,
+    .under_576_right {
+        display: none;
+       
+    }
+
+
+}
+
+/* -------md dimensio-------- */
+@media screen and (min-width: 768px) {
+
+    /* main section  */
+    .button_area {
+        width: 50%;
+    }
+
+    .col_md_3 {
+        width: calc(100% / 12 * 3);
+    }
+
+}
+
+/* ------lg dimension------ */
+@media screen and (min-width: 1279px) {
+
+    /* main section  */
+    .col_lg_2 {
+        width: calc(100% / 12 * 2);
+    }
+
+    #app_main h6 {
+        font-size: 16px;
+    }
+
+    #app_main .artist {
+        font-size: 12px;
+    }
+
+}
+
+/* ---------landscape dimension (extra dimension)-------- */
+@media screen and (max-height: 450px) {
+
+    #app_sidebar {
+        overflow-y: auto;
+
+    }
+
+    .upgrade,
+    .playlist,
+    .both_loghi,
+    .play {
+        display: none;
+    }
+
+    .spotify_play i {
+        display: inline-block;
+    }
+
+    #app_main .container_for_scrollbar {
+        height: 100%;
+    }
+}

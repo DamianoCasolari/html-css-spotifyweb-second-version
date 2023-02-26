@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Web</title>
+
+    <link href="https://fonts.cdnfonts.com/css/circular-std" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="top_page d_flex txt_c">
+        <aside id="app_sidebar" class="d_flex">
+            <div class="both_loghi">
+                <div><button class="btn btn_h logo"><img src="./assets/img/favicon.ico" alt="Logo"></button> </div>
+                <div><button class="btn btn_h logo_lg"><img src="./assets/img/logo.svg" alt="Logo_lg"></button></div>
+            </div>
+            <div class="sidebar_top">
+                <nav>
+                    <div><button class="btn btn_h home"><img src="./assets/img/home.svg" alt="home"></button><span>
+                            Home</span></div>
+                    <div><button class="btn btn_h search"><img src="./assets/img/search.svg"
+                                alt="search"></button><span>Cerca</span></div>
+                    <div><button class="btn btn_h librerary"><img src="./assets/img/libreria.svg"
+                                alt="librery"></button><span>La
+                            tua libreria</span></div>
+                </nav>
+            </div>
+            <div class="playlist">
+                <h5>PLAYLIST</h5>
+                <div><button class="btn btn_h add_playlist">+</button><span>Crea Playlist</span></div>
+            </div>
+
+            <div class="items_playlist">
+                <ul>
+                    <li><a href="#"> Nome playlist</a></li>
+                    <li><a href="#"> Nome playlist</a></li>
+                    <li><a href="#"> Nome playlist</a></li>
+                    <li><a href="#"> Nome playlist</a></li>
+                    <li><a href="#"> Nome playlist</a></li>
+                    <li><a href="#"> Nome playlist</a></li>
+                    <li><a href="#"> Nome playlist</a></li>
+                    <li><a href="#"> Nome playlist</a></li>
+                    <li><a href="#"> Nome playlist</a></li>
+                    <li><a href="#"> Nome playlist</a></li>
+                    <li><a href="#"> Nome playlist</a></li>
+                    <li><a href="#"> Nome playlist</a></li>
+                    <li><a href="#"> Nome playlist</a></li>
+                    <li><a href="#"> Nome playlist</a></li>
+                    <li><a href="#"> Nome playlist</a></li>
+                    <li><a href="#"> Nome playlist</a></li>
+                    <li><a href="#"> Nome playlist</a></li>
+                    <li><a href="#"> Nome playlist</a></li>
+                    <li><a href="#"> Nome playlist</a></li>
+                    <li><a href="#"> Nome playlist</a></li>
+
+                </ul>
+            </div>
+
+            <!-- /.sidebar_top -->
+            <div class="sidebar_bottom">
+
+                <div class="hr_download"><button class="btn btn_h download_app"><img src="./assets/img/download.svg"
+                            alt="download"></button><span>Istalla app</span></div>
+                <div> <button class="btn profile "><img src="./assets/img/profile.svg"
+                            alt="profile"></button><span><strong>Damiano Casolari</strong></span>
+                </div>
+            </div>
+            <!-- /.sidebar_bottom -->
+        </aside>
+        <!-- /#app_sidebar -->
+        <main id="app_main">
+            <div class="upgrade btn_h">
+                <div><a href="#" class="btn">EFFETTUA UPGRADE</a></div>
+            </div>
+            <!-- /.upgrade -->
+            <div class="under_576">
+                <div class="info_cover">
+                    <a href="#" class="album">Sinister</a>
+                    <div class="song">Brano</div>
+                    <div class="artist">Nome</div>
+                </div>
+                <div class="heart_folder d_flex">
+                    <div class="heart"><i class="btn_h fa-regular fa-heart"></i></div>
+                    <div class="folder"><i class="btn_h fa-regular fa-folder"></i></div>
+                </div>
+                <div class="cover">
+                    <a href="#"><img src="./assets/img/sinister.jpeg" alt="sinister"></a>
+                </div>
+            </div>
+            <div class="container_for_scrollbar">
+                <div class="category d_flex">
+                    <div class="in_evidence d_flex">
+                        <a href="#">IN EVIDENZA</a>
+                        <div class="border_up"></div>
+                    </div>
+                    <div class="in_evidence d_flex">
+                        <a href="#">PODCAST</a>
+                        <div class="border_up"></div>
+                    </div>
+                    <div class="in_evidence d_flex">
+                        <a href="#">CLASSIFICHE</a>
+                        <div class="border_up"></div>
+                    </div>
+                    <div class="in_evidence d_flex">
+                        <a href="#">GENERI E MOOD</a>
+                        <div class="border_up"></div>
+                    </div>
+                    <div class="in_evidence d_flex">
+                        <a href="#">NUOVE USCITE</a>
+                        <div class="border_up"></div>
+                    </div>
+                    <div class="in_evidence d_flex">
+                        <a href="#">SCOPRI</a>
+                        <div class="border_up"></div>
+                    </div>
+                </div>
+                <!-- /.category -->
+
+                <section class="recently_played">
+                    <h2 class="my_30">Recently played</h2>
+                    <div class="container_cover d_flex mg_negative_5">
+                        <div class="card col_12 col_6_s p_5 col_md_3 col_lg_2 txt_c ">
+                            <a href="#" class="single_cover_img">
+                                <div class="card overlay"><i class="fa-regular fa-circle-play"></i> </div>
+                                <img src="./assets/img/metal_lifting.jpg" alt="Metal_cover">
+                            </a>
+                            <a href="#">
+                                <h6 class="p_5">Heavy Metal</h6>
+                            </a>
+                            <a href="#">
+                                <div class="artist">Lorem, ipsum dolor.</div>
+                            </a>
+                        </div>
+                        <div class="card col_12 col_6_s p_5 col_md_3 col_lg_2 txt_c ">
+                            <a href="#" class="single_cover_img">
+                                <div class="card overlay"><i class="fa-regular fa-circle-play"></i> </div>
+                                <div><img src="./assets/img/stranger.jpeg" alt="stranger_cover"></div>
+                            </a>
+                            <a href="#">
+                                <h6 class="p_5">Stranger things</h6>
+                            </a>
+                            <a href="#">
+                                <div class="artist">Lorem, ipsum dolor.</div>
+                            </a>
+                        </div>
+                        <div class="card col_12 col_6_s p_5 col_md_3 col_lg_2 txt_c ">
+                            <a href="#" class="single_cover_img">
+                                <div class="card overlay"><i class="fa-regular fa-circle-play"></i> </div>
+                                <div><img src="./assets/img/aquietplace.jpeg" alt="aquietplace_cover"></div>
+                            </a>
+                            <a href="#">
+                                <h6 class="p_5">A quiet place</h6>
+                            </a>
+                            <a href="#">
+                                <div class="artist">Lorem, ipsum dolor.</div>
+                            </a>
+                        </div>
+                        <div class="card col_12 col_6_s p_5 col_md_3 col_lg_2 txt_c ">
+                            <a href="#" class="single_cover_img">
+                                <div class="card overlay"><i class="fa-regular fa-circle-play"></i> </div>
+                                <div><img src="./assets/img/split.jpeg" alt="Split_cover"></div>
+                            </a>
+                            <a href="#">
+                                <h6 class="p_5">Split</h6>
+                            </a>
+                            <a href="#">
+                                <div class="artist">Lorem, ipsum dolor.</div>
+                            </a>
+                        </div>
+                        <div class="card col_12 col_6_s p_5 col_md_3 col_lg_2 txt_c ">
+                            <a href="#" class="single_cover_img">
+                                <div class="card overlay"><i class="fa-regular fa-circle-play"></i> </div>
+                                <div><img src="./assets/img/cure.jpeg" alt="Cure_cover"></div>
+                            </a>
+                            <a href="#">
+                                <h6 class="p_5">A cure for wellness</h6>
+                            </a>
+                            <a href="#">
+                                <div class="artist">Lorem, ipsum dolor.</div>
+                            </a>
+                        </div>
+                        <div class="card col_12 col_6_s p_5 col_md_3 col_lg_2 txt_c ">
+                            <a href="#" class="single_cover_img">
+                                <div class="card overlay"><i class="fa-regular fa-circle-play"></i> </div>
+                                <div><img src="./assets/img/sinister.jpeg" alt="Sinister_cover"></div>
+                            </a>
+                            <a href="#">
+                                <h6 class="p_5">Sinister</h6>
+                            </a>
+                            <a href="#">
+                                <div class="artist">Lorem, ipsum dolor.</div>
+                            </a>
+                        </div>
+
+
+                    </div>
+                </section>
+                <!-- /.recently_played -->
+                <section class="Created_for">
+                    <div class="heading my_30">
+                        <h2>Creato per Damiano</h2>
+                        <div class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                    </div>
+                    <div class="container_cover d_flex mg_negative_5">
+                        <div class="card col_12 col_6_s p_5 col_md_3 col_lg_2 txt_c ">
+                            <a href="#" class="single_cover_img">
+                                <div class="card overlay"><i class="fa-regular fa-circle-play"></i> </div>
+
+                                <div><img src="./assets/img/radar.jpeg" alt="Radar_cover"></div>
+                            </a>
+                            <a href="#">
+                                <h6 class="p_5">Release Radar</h6>
+                            </a>
+
+                        </div>
+                        <div class="card col_12 col_6_s p_5 col_md_3 col_lg_2 txt_c ">
+                            <a href="#" class="single_cover_img">
+                                <div class="card overlay"><i class="fa-regular fa-circle-play"></i> </div>
+                                <div><img src="./assets/img/mixdaily.jpeg" alt="Dailymix_cover"></div>
+                            </a>
+                            <a href="#">
+                                <h6 class="p_5">Daily mix 1</h6>
+                            </a>
+
+                        </div>
+
+                    </div>
+                </section>
+                <!-- /.Created_for -->
+                <section class="more_love">
+                    <div class="heading my_30">
+                        <h2>Artisti più popolari</h2>
+                        <div class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                    </div>
+                    <div class="container_cover d_flex mg_negative_5">
+                        <div class="card col_12 col_6_s p_5 col_md_3 col_lg_2 txt_c ">
+                            <a href="#" class="single_cover_img">
+                                <div class="card overlay"><i class="fa-regular fa-circle-play"></i> </div>
+                                <div><img src="./assets/img/youg.jpeg" alt="Youg_cover"></div>
+                            </a>
+                            <a href="#">
+                                <h6 class="p_5">Release Radar</h6>
+                            </a>
+
+                        </div>
+                        <div class="card col_12 col_6_s p_5 col_md_3 col_lg_2 txt_c ">
+                            <a href="#" class="single_cover_img">
+                                <div class="card overlay"><i class="fa-regular fa-circle-play"></i> </div>
+                                <div><img src="./assets/img/einaudi.jpeg" alt="einaudi_cover"></div>
+                            </a>
+                            <a href="#">
+                                <h6 class="p_5">Daily mix 1</h6>
+                            </a>
+
+                        </div>
+
+                    </div>
+                </section>
+                <!-- /.more_love -->
+                <div class="final_space">
+
+                </div>
+            </div>
+
+
+        </main>
+        <!-- /#app_main -->
+    </div>
+    <footer id="app_footer">
+        <div class="container_footer d_flex">
+            <div class="under_576_left">
+                <div><button class="btn"><i class="btn_h1 fa-solid fa-list-ul"></i></button></div>
+                <div><button class="btn"><i class="btn_h1 fa-solid fa-display"></i></button></div>
+            </div>
+            <div class="selected_album d_flex">
+                <div class="cover">
+                    <a href="#"><img src="./assets/img/sinister.jpeg" alt="sinister"></a>
+                </div>
+                <div class="info_cover">
+                    <a href="#" class="album">Sinister</a>
+                    <div class="container_animation">
+                        <div class="block_effect left_wall"></div>
+                        <div class="song">Brano</div>
+                        <div class="artist">Nome</div>
+                        <div class="block_effect right_wall"></div>
+                    </div>
+                </div>
+                <div class="heart_folder d_flex">
+                    <div class="heart"><i class="btn_h fa-regular fa-heart"></i></div>
+                    <div class="folder"><i class="btn_h fa-regular fa-folder"></i></div>
+                </div>
+            </div>
+
+            <div class="music_function d_flex">
+                <div class="container_button_area">
+                    <div class="button_area d_flex">
+                        <div><button class="btn shuffle"><i class="btn_h1 fa-solid fa-shuffle"></i></button></div>
+                        <div><button class="btn"><i class="btn_h1 fa-solid fa-backward-step"></i></button></div>
+                        <div><button class="btn play"><i class="scale_h fa-regular fa-circle-play"></i></button></div>
+                        <div><button class="btn spotify_play"><i class="fa-brands fa-spotify"></i></button></div>
+                        <div><button class="btn"><i class="btn_h1 fa-solid fa-forward-step"></i></button></div>
+                        <div><button class="btn repeat"><i class="btn_h1 fa-solid fa-arrow-rotate-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="timing_area d_flex">
+
+                    <input class="m_lr_5" type="number" id="rangevalue" value="2.35" step="0.01"
+                        oninput="range.value=value">
+                    <input type="range" step="0.01" min="0.00" max="5.00" value="2.35" class="slider" id="range"
+                        oninput="rangevalue.value=value">
+                    <div class="m_lr_5">5.00</div>
+
+                </div>
+            </div>
+            <div class="under_576_right">
+                <div><button class="btn"><i class="btn_h1 fa-solid fa-volume-high"></i></button></div>
+                <div class="volume">
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                </div>
+            </div>
+            <div class="other_function d_flex">
+                <div><button class="btn"><i class="btn_h1 fa-solid fa-list-ul"></i></button></div>
+                <div><button class="btn"><i class="btn_h1 fa-solid fa-display"></i></button></div>
+                <div><button class="btn"><i class="btn_h1 fa-solid fa-volume-high"></i></button></div>
+                <div class="volume">
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /#app_footer -->
+</body>
+
+</html>
