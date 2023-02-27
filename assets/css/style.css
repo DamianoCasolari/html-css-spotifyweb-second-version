@@ -546,7 +546,8 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 25%;
+    width: 20%;
+    
    
 }
 
@@ -554,14 +555,16 @@ a {
     color: var(--sw-light);
     font-size: 15px;
     margin-left: 10px;
+    filter: brightness(60%);
 }
+
 
 
 /* CENTRAL block footer  */
 
 
 .music_function {
-    width: 40%;
+    width: 60%;
     height: 100%;
     align-items: center;
     justify-content: center;
@@ -577,8 +580,8 @@ a {
 
 .button_area {
     height: 100%;
-    max-width: 230px;
-    display: flex;
+   max-width: 300px;
+    
     justify-content: space-between;
     align-items: center;
 
@@ -604,6 +607,10 @@ a {
     filter: invert(1);
     margin: 0 7px;
     transition-duration: 0.3s;
+    display: none;
+}
+
+.spotify_play_container {
     display: none;
 }
 
@@ -702,7 +709,7 @@ input[type="number"] {
 ************ */
 
 .btn_h:hover {
-    filter: brightness(100%) !important;
+    filter: brightness(120%) !important;
 }
 
 .btn_h1:hover {
@@ -935,6 +942,9 @@ input[type="number"] {
     }
 
     .spotify_play i {
+        display: inline-block;
+    }
+    .spotify_play_container {
         display: inline-block;
     }
 
