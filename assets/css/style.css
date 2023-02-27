@@ -315,6 +315,12 @@ a {
 
 }
 
+.under_576 .info_cover {
+    display: flex; 
+    flex-direction: column;
+   
+}
+
 
 
 /* Upgrade zone  */
